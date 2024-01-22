@@ -95,8 +95,8 @@ namespace Minicore_Notas.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DefineRange([Bind("Start", "End")] GradeVM gradeVM )
         {
-            double restante = 0;
-            double restanteAux = 0;
+
+            ViewData["StudentId"] = new SelectList(_context.Students, "Id", "Name");
 
             var grades = _context.Grades.Where(g => g.Date >= gradeVM.Start && g.Date <= gradeVM.End).ToList();
             var students = _context.Students.ToList();
@@ -104,6 +104,7 @@ namespace Minicore_Notas.Controllers
             var gradeVm = new GradeVM
             {
                 Promedios = new Dictionary<int, double[]>(),
+                Grade = new Grade(),
                 GradesList = grades,
                 StudentsList = students,
                 PeriodsList = periods,
@@ -121,7 +122,6 @@ namespace Minicore_Notas.Controllers
                 gradeVm.Promedios.Add(student.Id, promedios);
 
                 promedios[4] = (6 - (promedios[0] + promedios[1]))/0.4;
-                
 
             }   
 
