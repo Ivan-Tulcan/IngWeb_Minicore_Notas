@@ -12,7 +12,7 @@ namespace Minicore_Notas.Models
         [Range(0, 10)]
         public double GradeValue { get; set; }
         [Required]
-        public DateOnly Date { get; set; }
+        public DateOnly Date { get; set; } = DateOnly.FromDateTime(System.DateTime.Now);
         [Required]
         public int StudentId { get; set; }
         [ForeignKey("StudentId")]

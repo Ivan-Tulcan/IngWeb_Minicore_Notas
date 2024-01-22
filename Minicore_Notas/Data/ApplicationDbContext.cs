@@ -67,21 +67,21 @@ namespace Minicore_Notas.Data
                     Id = 1,
                     Start = new DateOnly(2023, 9, 27),
                     End = new DateOnly(2023, 11, 25),
-                    Weigh = 1
+                    Weigh = 25
                 },
                 new Period
                 {
                     Id = 2,
                     Start = new DateOnly(2023, 11, 26),
                     End = new DateOnly(2024, 1, 8),
-                    Weigh = 2
+                    Weigh = 35
                 },
                 new Period
                 {
                     Id = 3,
                     Start = new DateOnly(2024, 1, 9),
                     End = new DateOnly(2024, 9, 30),
-                    Weigh = 3
+                    Weigh = 40
                 }
             );
 

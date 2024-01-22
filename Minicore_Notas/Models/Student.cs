@@ -13,15 +13,7 @@ namespace Minicore_Notas.Models
         [Required]
         public string Name { get; set; }
 
-        public List<Grade> Grades { get; set; }
-
-        /*
-        public double CalculatePeriodAverage(int periodId, DateOnly start, DateOnly end)
-        {
-            var lista = _context.GetGradesByRange(Id, start, end);
-            return _context.GetPeriodAverageByList(lista, periodId);
-        }   
-        */
+        public List<Grade> Grades { get; set; }  
         
 
     }
